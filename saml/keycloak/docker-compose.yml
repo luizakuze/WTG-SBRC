@@ -1,0 +1,32 @@
+services:
+    keycloak-sp:
+        container_name: keycloak-sp
+        image: quay.io/keycloak/keycloak:26.3.2
+        command:
+            - 'start-dev'
+        environment:
+            - KC_HOSTNAME=localhost
+            - KEYCLOAK_ADMIN=admin
+            - KEYCLOAK_ADMIN_PASSWORD=admin
+        networks:
+            - saml-network
+        ports:
+            - '8080:8080'
+
+    keycloak-idp:
+        container_name: keycloak-idp
+        image: quay.io/keycloak/keycloak:26.3.2
+        command:
+            - 'start-dev'
+        environment:
+            - KC_HOSTNAME=localhost
+            - KEYCLOAK_ADMIN=admin
+            - KEYCLOAK_ADMIN_PASSWORD=admin
+        networks:
+            - saml-network
+        ports:
+            - '8081:8080'
+
+networks:
+    saml-network:
+        driver: bridge

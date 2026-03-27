@@ -1,0 +1,15 @@
+# Lighthouse generated data
+oidf/lighthouse/lighthouse/data/storage/
+oidf/lighthouse/lighthouse/data/signing/
+
+# Caddy generated data
+oidf/lighthouse/caddy/data/
+oidf/lighthouse/caddy/config/
+
+
+
+
+
+
+
+

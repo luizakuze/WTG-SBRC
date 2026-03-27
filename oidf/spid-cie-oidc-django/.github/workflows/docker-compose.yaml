@@ -1,0 +1,39 @@
+name: Docker Compose test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: ["*"]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  docker:
+    name: Docker Compose
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Where I am?
+        run: |
+          pwd
+          ls -al
+
+      - name: Setup example projects - folder creation
+        run: cp -R examples example-docker
+
+      - name: Setup example projects - strings replacement
+        run: bash docker-prepare.sh
+
+      - name: Start containers
+        run: docker compose -f "docker-compose.yml" up -d --build
+
+      - name: Stop containers
+        if: always()
+        run: docker compose -f "docker-compose.yml" down

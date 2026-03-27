@@ -1,0 +1,85 @@
+# Python CI: test, lint, security audit, complexity checks
+# https://docs.github.com/en/actions/automating-builds-and-tests
+
+name: spid_cie_oidc
+
+on:
+  push:
+    branches: ["*"]
+  pull_request:
+    branches: ["*"]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Test & Lint (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        # 3.14 excluded until Django officially supports it (template context copy issue)
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements-dev.txt', 'setup.py') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+
+      - name: Install Django Bootstrap Italia template
+        run: pip install design-django-theme
+
+      - name: Install spid-cie-oidc
+        run: pip install -e .
+
+      - name: Lint with flake8
+        run: |
+          flake8 ./spid_cie_oidc --count --select=E9,F63,F7,F82 --show-source --statistics
+          flake8 ./spid_cie_oidc --count --statistics
+
+      - name: Radon (cyclomatic complexity)
+        run: |
+          radon cc ./spid_cie_oidc -a -nb --total-average
+          radon cc ./spid_cie_oidc -a -nb --total-average --min D
+
+      - name: pip-audit (dependency vulnerabilities)
+        run: pip-audit --skip-editable
+
+      - name: Bandit (security scan)
+        run: bandit -r -x tests/ spid_cie_oidc/ -ll
+
+      - name: Unit tests
+        run: |
+          cp examples/federation_authority/federation_authority/settingslocal.py.example \
+             examples/federation_authority/federation_authority/settingslocal.py
+          coverage erase
+          coverage run examples/federation_authority/manage.py test spid_cie_oidc
+          coverage report -m --skip-covered
+
+      - name: Example data imports
+        run: |
+          cp examples/federation_authority/federation_authority/settingslocal.py.example \
+             examples/federation_authority/federation_authority/settingslocal.py
+          cd examples/federation_authority/
+          ./manage.py migrate
+          ./manage.py loaddata dumps/example.json

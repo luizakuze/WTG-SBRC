@@ -1,0 +1,41 @@
+server:
+    port: 7672
+
+signing:
+    alg: ES256
+    key_dir: "/data/signing"
+
+federation_data:
+    entity_id: "http://host.docker.internal:8000"
+    federation_entity_metadata:
+        display_name: "Lighthouse TA"
+        organization_name: "Minha Org"
+    metadata_policy_file: "/data/metadata-policy.json"
+
+storage:
+    backend: badger
+    data_dir: "/data/storage"
+
+endpoints:
+    fetch:
+        path: "/fetch"
+        #statement_lifetime: 3600
+    list:
+        path: "/list"
+    resolve:
+        path: "/resolve"
+        #grace_period: 1h
+        #time_elapsed_grace_factor: 0.75
+    trust_mark:
+        path: "/trustmark"
+        trust_mark_specs:
+            - trust_mark_type: "https://tm.example.org"
+              lifetime: 3600
+              ref: "https://tm.example.org/ref"
+              logo_uri: "https://tm.example.org/logo"
+    enroll:
+        path: "/enroll"
+    enroll_request:
+        path: "/enroll_request"
+        checker:
+            type: none

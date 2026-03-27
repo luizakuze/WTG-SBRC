@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  cie-provider:
+    image: ghcr.io/italia/spid-cie-oidc-django:latest
+    ports:
+      - "8002:8002"
+    volumes:
+      - ./examples/provider:/django-project
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    command: >
+      bash -lc "
+        cd /django-project &&
+        [ -f provider/settingslocal.py ] || cp provider/settingslocal.py.example provider/settingslocal.py &&
+        python3 manage.py migrate &&
+        python3 manage.py loaddata dumps/example.json &&
+        python3 manage.py runserver 0.0.0.0:8002
+      "
+
+  relying-party:
+    image: ghcr.io/italia/spid-cie-oidc-django:latest
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./examples/relying_party:/django-project
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    command: >
+      bash -lc "
+        cd /django-project &&
+        [ -f relying_party/settingslocal.py ] || cp relying_party/settingslocal.py.example relying_party/settingslocal.py &&
+        python3 manage.py migrate &&
+        python3 manage.py loaddata dumps/example.json &&
+        python3 manage.py runserver 0.0.0.0:8001
+      "

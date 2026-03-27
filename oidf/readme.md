@@ -1,4 +1,4 @@
-# Experimentação: Montar uma corrente de confiança contendo um Provedor OIDC (OP), uma Parte Confiável (RP) e uma Âncora de Con
+# Experimentação: Montar uma corrente de confiança contendo um Provedor OIDC (OP), uma Parte Confiável (RP) e uma Âncora de Confiança
 
 Este diretório apresenta um ambiente de experimentação para o framework OpenID Federation, com o objetivo de demonstrar a construção de uma corrente de confiança entre diferentes entidades. O cenário inclui uma Âncora de Confiança (Trust Anchor), um Provedor OpenID Connect (OP) e uma Parte Confiável (RP), permitindo observar, na prática, o processo de estabelecimento de confiança, registro de entidades e emissão de entity statements.
 

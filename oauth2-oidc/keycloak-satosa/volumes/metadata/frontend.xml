@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<ns0:EntityDescriptor xmlns:ns0="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ns1="http://www.w3.org/2000/09/xmldsig#" xmlns:ns2="urn:oasis:names:tc:SAML:metadata:ui" ID="id-o1ci7rpH5hGJusjQX" entityID="https://proxy.gidlab.rnp.br/Mirror/proxy/aHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29t"><ns1:Signature Id="Signature1"><ns1:SignedInfo><ns1:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ns1:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><ns1:Reference URI="#id-o1ci7rpH5hGJusjQX"><ns1:Transforms><ns1:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ns1:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ns1:Transforms><ns1:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ns1:DigestValue>tXcZK7kap9pdCMoocMX8vkq61Y4=</ns1:DigestValue></ns1:Reference></ns1:SignedInfo><ns1:SignatureValue>kF5UX9Y0FC0FuMXtb47lMNQ0j0T16oQYmEXQR2HnqZlyKiDd/8UlgnD8J2OCs1M3
+fj5hIOX5Gs0cQHA9b+Wmb0g+Qvu7kU8ASzNRrn1AuG+5nBFh4B7Mr6HMs+TjrRev
+iWD0EXXx/P0GR9/1gJdykTE23MiNN4hZohV3BQMHxpFiQVenmRhi4Bkh075xff6z
+J0Gnh/MgqAJY1iyd8AQNnw9/oOadRyPYZ1js3h5W6b44wvBdt+Cga6pRFU1PTP1B
+saLNl12sIJgei8mL7htnjnIhOHx9wq41/oMtSQ9e1Sg1vHN/fjlPCwI2NBbEbbBt
+MGMrgTpL50eLeI0y5RZ3dA==</ns1:SignatureValue><ns1:KeyInfo><ns1:X509Data><ns1:X509Certificate>MIIDzTCCArWgAwIBAgIUfbmcSCRq27+gkQmRQB5I7O+55v8wDQYJKoZIhvcNAQELBQAwdjELMAkGA1UEBhMCQlIxFzAVBgNVBAgMDlNhbnRhIENhdGFyaW5hMRkwFwYDVQQHDBBGbG9yaWFuw4PCs3BvbGlzMQ8wDQYDVQQKDAZHSWRMYWIxDzANBgNVBAsMBkdJZExhYjERMA8GA1UEAwwIa2V5Y2xvYWswHhcNMjAwODE3MTc1MTUyWhcNMzAwODE3MTc1MTUyWjB2MQswCQYDVQQGEwJCUjEXMBUGA1UECAwOU2FudGEgQ2F0YXJpbmExGTAXBgNVBAcMEEZsb3JpYW7Dg8KzcG9saXMxDzANBgNVBAoMBkdJZExhYjEPMA0GA1UECwwGR0lkTGFiMREwDwYDVQQDDAhrZXljbG9hazCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK1Pg9KjAzRyvC4O5SVRsdv2kmb2dA83vL6pf5AVubCctn7MiTI2BcXxVTVGHderqcFuFDYD0/vrKGAkt9dTPisWyJtCIDNilbF8K8o23vl07RGCX3Z+JPfwg+VxsG4nPTuUAs5qMW2wJCoe9n1Juqv9Lgm6mAU2xeifkwzCZt3+JESWT4ITbLfSDWc8YBJMS3Qg9/oBhmrzEfPraq7uRHELUxLL3HIERBK/9vsgbP/Q98KrBx8V+a0dZRMWfQfgcsTo+VW26gTfbB3qzBFz4C2hI3o79PjeN9Z8RBmHVmHQk2XYg+3fb3cbTwoD6C6tb8F91b2NJvyeyp/SXMU2OhcCAwEAAaNTMFEwHQYDVR0OBBYEFJftAROvkvDuOfT3skJcsg0/tiNsMB8GA1UdIwQYMBaAFJftAROvkvDuOfT3skJcsg0/tiNsMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAD5Tc+BKp1xBHLmsRGgByDqwogZE1bNNQXgYVSdh7FbW8nxMp2lve1EJHtxlZrHeW0dW7UySkSl5Tdvv0Hz9OkMJNU7w0qPDr5SzhpPbGiIN2eJHR7dV29W0B59rn1efmFXeRoPqXCv9S+LjzguOjrQLjROB6sWc1WEC4Y+c2H68b7eMhqYCo+gPzRsH3n6RwswKKxa2EHuoErfQEmTQbFnIc6WrPXs1ab7fvD+IfkqjhnexXFHXcK86b3EdkuXATCTUwLLkZ9u0y1UqD1aiI/bQp5VsIk/i44NFFQ0a1FTg+n1TuM9Ab4lRZP7CKgnMfLKRNvQ1E7IVMc/ocdaEswM=</ns1:X509Certificate></ns1:X509Data></ns1:KeyInfo></ns1:Signature><ns0:IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol"><ns0:Extensions><ns2:UIInfo><ns2:DisplayName xml:lang="en">Google</ns2:DisplayName><ns2:Description xml:lang="en">Google OP</ns2:Description><ns2:Keywords xml:lang="se">Satosa IdP-SE</ns2:Keywords><ns2:Keywords xml:lang="en">Satosa IdP-EN</ns2:Keywords><ns2:Logo height="100" width="100">http://idp.logo.url/</ns2:Logo><ns2:InformationURL xml:lang="en">http://idp.information.url/</ns2:InformationURL><ns2:PrivacyStatementURL xml:lang="en">http://idp.privacy.url/</ns2:PrivacyStatementURL></ns2:UIInfo></ns0:Extensions><ns0:KeyDescriptor use="signing"><ns1:KeyInfo><ns1:X509Data><ns1:X509Certificate>MIIDzTCCArWgAwIBAgIUfbmcSCRq27+gkQmRQB5I7O+55v8wDQYJKoZIhvcNAQEL
+BQAwdjELMAkGA1UEBhMCQlIxFzAVBgNVBAgMDlNhbnRhIENhdGFyaW5hMRkwFwYD
+VQQHDBBGbG9yaWFuw4PCs3BvbGlzMQ8wDQYDVQQKDAZHSWRMYWIxDzANBgNVBAsM
+BkdJZExhYjERMA8GA1UEAwwIa2V5Y2xvYWswHhcNMjAwODE3MTc1MTUyWhcNMzAw
+ODE3MTc1MTUyWjB2MQswCQYDVQQGEwJCUjEXMBUGA1UECAwOU2FudGEgQ2F0YXJp
+bmExGTAXBgNVBAcMEEZsb3JpYW7Dg8KzcG9saXMxDzANBgNVBAoMBkdJZExhYjEP
+MA0GA1UECwwGR0lkTGFiMREwDwYDVQQDDAhrZXljbG9hazCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAK1Pg9KjAzRyvC4O5SVRsdv2kmb2dA83vL6pf5AV
+ubCctn7MiTI2BcXxVTVGHderqcFuFDYD0/vrKGAkt9dTPisWyJtCIDNilbF8K8o2
+3vl07RGCX3Z+JPfwg+VxsG4nPTuUAs5qMW2wJCoe9n1Juqv9Lgm6mAU2xeifkwzC
+Zt3+JESWT4ITbLfSDWc8YBJMS3Qg9/oBhmrzEfPraq7uRHELUxLL3HIERBK/9vsg
+bP/Q98KrBx8V+a0dZRMWfQfgcsTo+VW26gTfbB3qzBFz4C2hI3o79PjeN9Z8RBmH
+VmHQk2XYg+3fb3cbTwoD6C6tb8F91b2NJvyeyp/SXMU2OhcCAwEAAaNTMFEwHQYD
+VR0OBBYEFJftAROvkvDuOfT3skJcsg0/tiNsMB8GA1UdIwQYMBaAFJftAROvkvDu
+OfT3skJcsg0/tiNsMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEB
+AD5Tc+BKp1xBHLmsRGgByDqwogZE1bNNQXgYVSdh7FbW8nxMp2lve1EJHtxlZrHe
+W0dW7UySkSl5Tdvv0Hz9OkMJNU7w0qPDr5SzhpPbGiIN2eJHR7dV29W0B59rn1ef
+mFXeRoPqXCv9S+LjzguOjrQLjROB6sWc1WEC4Y+c2H68b7eMhqYCo+gPzRsH3n6R
+wswKKxa2EHuoErfQEmTQbFnIc6WrPXs1ab7fvD+IfkqjhnexXFHXcK86b3EdkuXA
+TCTUwLLkZ9u0y1UqD1aiI/bQp5VsIk/i44NFFQ0a1FTg+n1TuM9Ab4lRZP7CKgnM
+fLKRNvQ1E7IVMc/ocdaEswM=
+</ns1:X509Certificate></ns1:X509Data></ns1:KeyInfo></ns0:KeyDescriptor><ns0:KeyDescriptor use="encryption"><ns1:KeyInfo><ns1:X509Data><ns1:X509Certificate>MIIDzTCCArWgAwIBAgIUfbmcSCRq27+gkQmRQB5I7O+55v8wDQYJKoZIhvcNAQEL
+BQAwdjELMAkGA1UEBhMCQlIxFzAVBgNVBAgMDlNhbnRhIENhdGFyaW5hMRkwFwYD
+VQQHDBBGbG9yaWFuw4PCs3BvbGlzMQ8wDQYDVQQKDAZHSWRMYWIxDzANBgNVBAsM
+BkdJZExhYjERMA8GA1UEAwwIa2V5Y2xvYWswHhcNMjAwODE3MTc1MTUyWhcNMzAw
+ODE3MTc1MTUyWjB2MQswCQYDVQQGEwJCUjEXMBUGA1UECAwOU2FudGEgQ2F0YXJp
+bmExGTAXBgNVBAcMEEZsb3JpYW7Dg8KzcG9saXMxDzANBgNVBAoMBkdJZExhYjEP
+MA0GA1UECwwGR0lkTGFiMREwDwYDVQQDDAhrZXljbG9hazCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAK1Pg9KjAzRyvC4O5SVRsdv2kmb2dA83vL6pf5AV
+ubCctn7MiTI2BcXxVTVGHderqcFuFDYD0/vrKGAkt9dTPisWyJtCIDNilbF8K8o2
+3vl07RGCX3Z+JPfwg+VxsG4nPTuUAs5qMW2wJCoe9n1Juqv9Lgm6mAU2xeifkwzC
+Zt3+JESWT4ITbLfSDWc8YBJMS3Qg9/oBhmrzEfPraq7uRHELUxLL3HIERBK/9vsg
+bP/Q98KrBx8V+a0dZRMWfQfgcsTo+VW26gTfbB3qzBFz4C2hI3o79PjeN9Z8RBmH
+VmHQk2XYg+3fb3cbTwoD6C6tb8F91b2NJvyeyp/SXMU2OhcCAwEAAaNTMFEwHQYD
+VR0OBBYEFJftAROvkvDuOfT3skJcsg0/tiNsMB8GA1UdIwQYMBaAFJftAROvkvDu
+OfT3skJcsg0/tiNsMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEB
+AD5Tc+BKp1xBHLmsRGgByDqwogZE1bNNQXgYVSdh7FbW8nxMp2lve1EJHtxlZrHe
+W0dW7UySkSl5Tdvv0Hz9OkMJNU7w0qPDr5SzhpPbGiIN2eJHR7dV29W0B59rn1ef
+mFXeRoPqXCv9S+LjzguOjrQLjROB6sWc1WEC4Y+c2H68b7eMhqYCo+gPzRsH3n6R
+wswKKxa2EHuoErfQEmTQbFnIc6WrPXs1ab7fvD+IfkqjhnexXFHXcK86b3EdkuXA
+TCTUwLLkZ9u0y1UqD1aiI/bQp5VsIk/i44NFFQ0a1FTg+n1TuM9Ab4lRZP7CKgnM
+fLKRNvQ1E7IVMc/ocdaEswM=
+</ns1:X509Certificate></ns1:X509Data></ns1:KeyInfo></ns0:KeyDescriptor><ns0:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</ns0:NameIDFormat><ns0:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</ns0:NameIDFormat><ns0:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://proxy.gidlab.rnp.br/google/aHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29t/sso/post"/><ns0:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://proxy.gidlab.rnp.br/google/aHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29t/sso/redirect"/></ns0:IDPSSODescriptor><ns0:Organization><ns0:OrganizationName xml:lang="en">IdP Proxy GIdLab.</ns0:OrganizationName><ns0:OrganizationDisplayName xml:lang="en">IdP Proxy GIdLab</ns0:OrganizationDisplayName><ns0:OrganizationURL xml:lang="en">https://gidlab.rnp.br</ns0:OrganizationURL></ns0:Organization><ns0:ContactPerson contactType="technical"><ns0:GivenName>GIdLab</ns0:GivenName><ns0:EmailAddress>gidlab@rnp.br</ns0:EmailAddress></ns0:ContactPerson><ns0:ContactPerson contactType="support"><ns0:GivenName>GIdLab</ns0:GivenName><ns0:EmailAddress>atendimento@rnp.br</ns0:EmailAddress></ns0:ContactPerson></ns0:EntityDescriptor>

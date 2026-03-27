@@ -1,0 +1,14 @@
+{
+    "keycloak-sp": {
+        "client_id": "keycloak-sp",
+        "client_secret": "keycloak-sp-secret",
+        "redirect_uris": [
+            "http://localhost:8080/realms/WTG-SP/broker/satosa-oidc/endpoint",
+            "http://localhost:8080/realms/WTG-SP/broker/oidc/endpoint"
+        ],
+        "response_types": [
+            "code"
+        ],
+        "token_endpoint_auth_method": "client_secret_post"
+    }
+}

@@ -1,0 +1,5 @@
+DATA_DIR=/satosa
+PROXY_PORT=443
+SATOSA_STATE_ENCRYPTION_KEY=trocar_enc_key_asdASD123
+SATOSA_USER_ID_HASH_SALT=trocar_user_id_salt
+METADATA_DIR=/satosa/metadata

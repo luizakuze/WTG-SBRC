@@ -1,0 +1,31 @@
+services:
+    keycloak-sp:
+        container_name: keycloak-sp
+        image: quay.io/keycloak/keycloak:26.3.2
+        command:
+            - 'start-dev'
+        environment:
+            - KC_HOSTNAME=localhost
+            - KEYCLOAK_ADMIN=admin
+            - KEYCLOAK_ADMIN_PASSWORD=admin
+        networks:
+            - network
+        ports:
+            - '8080:8080'
+
+    satosa:
+        container_name: satosa
+        image: satosa:8.4.0
+        entrypoint: ["/usr/local/bin/docker-entrypoint.sh", "--bind", "0.0.0.0:3443", "--certfile", "/etc/satosa/https.crt", "--keyfile", "/etc/satosa/https.key", "satosa.wsgi:app"]
+        env_file:
+          - .satosa_env
+        volumes:
+          - ./volumes:/etc/satosa
+        networks:
+          - network
+        ports:
+          - '8082:3443'
+
+networks:
+    network:
+        driver: bridge
